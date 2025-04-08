@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.10](https://github.com/k8sgpt-ai/k8sgpt/compare/v0.4.9...v0.4.10) (2025-04-08)
+
+
+### Bug Fixes
+
+* pod analyzer catches errors when containers are in Terminated state ([#1438](https://github.com/k8sgpt-ai/k8sgpt/issues/1438)) ([dceda9a](https://github.com/k8sgpt-ai/k8sgpt/commit/dceda9a6a16a914b916c478ecd0b4c8ed0e19c40))
+
 ## [0.4.9](https://github.com/k8sgpt-ai/k8sgpt/compare/v0.4.8...v0.4.9) (2025-04-08)
 
 
