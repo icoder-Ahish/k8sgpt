@@ -85,10 +85,17 @@ func NewAnalysis(
 	interactiveMode bool,
 	httpHeaders []string,
 	withStats bool,
+	kubeconfigPath string, // Added KubeConfigPath ( Modified by ashish)
 ) (*Analysis, error) {
 	// Get kubernetes client from viper.
 	kubecontext := viper.GetString("kubecontext")
 	kubeconfig := viper.GetString("kubeconfig")
+	
+	//start Use the provided kubeconfigPath if it's not empty(Modified by ashish)
+	if kubeconfigPath != "" {
+		kubeconfig = kubeconfigPath
+	} // end
+	
 	client, err := kubernetes.NewClient(kubecontext, kubeconfig)
 	if err != nil {
 		return nil, fmt.Errorf("initialising kubernetes client: %w", err)
